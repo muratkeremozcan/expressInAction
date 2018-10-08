@@ -13,7 +13,7 @@ app.use((request, response, next) => {
   if ((minute % 2 === 0)){ // if it's an even minute, move on to the next middleware
     next();
   } else { // if it's an odd minute, end response here
-    response.statusCode = 403; // https://www.easyname.com/en/support/hosting/158-what-do-the-http-status-codes-401-403-404-and-500-mean
+    response.statusCode = 403; // https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
     response.end('Not authorized');
   }
 });

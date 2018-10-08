@@ -40,7 +40,7 @@ app.get("/hello/:who", (request, response) => {
 });
 
 app.use((request, response) => { // the only MIDDLEWARE. If you miss the above routes, it ends up here
-  response.statusCode = 404; // https://www.easyname.com/en/support/hosting/158-what-do-the-http-status-codes-401-403-404-and-500-mean
+  response.statusCode = 404; // https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
   response.end('404!');
 });
 
@@ -54,7 +54,7 @@ app.listen(3000, function() {
 // HTTP status 404 Not Found
 // HTTP status 500 Internal Server Error
 // HTTP status 503 Service unavailable
-// https://www.easyname.com/en/support/hosting/158-what-do-the-http-status-codes-401-403-404-and-500-mean
+// https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
 
 /* Recall how this was done in Node, we could only use 1 request handler function

@@ -44,7 +44,7 @@ app.use((request,response) => { // MIDDLEWARE TO SERVE 404. if no new-entry or s
 // HTTP status 404 Not Found
 // HTTP status 500 Internal Server Error
 // HTTP status 503 Service unavailable
-// https://www.easyname.com/en/support/hosting/158-what-do-the-http-status-codes-401-403-404-and-500-mean
+// https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
 app.listen(3000, function() {
   console.log('Guestbook app started on port 3000');
