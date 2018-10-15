@@ -1,4 +1,4 @@
-// ROUTING is a way to map url path requests to specific request handler functions. APP.GET("path", <request_handler_function) . also PUT, POST, SET and other HTTP verbs
+// ROUTING is a way to map url path requests to specific request handler functions. APP.GET("path", <request_handler_function) . also PUT, POST, DELETE and other HTTP verbs
 // The delta with MIDDLEWARE is that middleware flows through and routing takes paths APP.USE(<request_handler_function>
 
 var express = require('express'); // requiring modules

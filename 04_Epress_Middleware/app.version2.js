@@ -7,7 +7,7 @@ var app = express(); // creates an Express application and puts it inside a vari
 // instead of a creating our own logger, we can use Morgan
 app.use(morgan("short")); // Morgan has configuration options such as "short"  "tiny"  and  "combined" - which is big https://github.com/expressjs/morgan
 
-// instead of our own file server middleware, can use express.static . If the file exists, it sends it, if not it will continue to the next middleware stck
+// instead of our own file server middleware, can use express.static . If the file exists, it sends it, if not it will continue to the next middleware stack
 var filePath = path.join(__dirname, 'static'); // no need for req.url like before: path.join(__dirname, 'static', req.url)
 app.use(express.static(filePath)); // all the error checking is done for us, with performance and security improvements
 

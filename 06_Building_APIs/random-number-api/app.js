@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express(); // create a new express application
 
+// this app shows the fundamentals of building an API with Express: parse requests, set http status codes, send JSON
+
 app.get('/random/:min/:max', (req, res) => { // express get route and its handler
   var min = parseInt(req.params.min); // min & max are passed as parameters to the url, and then parsed
   var max = parseInt(req.params.max); // The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems) https://devdocs.io/javascript/global_objects/parseint
@@ -12,7 +14,7 @@ app.get('/random/:min/:max', (req, res) => { // express get route and its handle
     });
     return; // if we do not return, the function continues and another response is sent, Express would start throwing errors
   }
-  var result = Math.round((Math.random() * (max - min)) + min); // Math.random is 0 to 1, time range , plus lower limit
+  var result = Math.round((Math.random() * (max - min)) + min); // Math.random is 0 to 1, range , plus lower limit
   res.json({ // send the calculated result back as json
     result: result
   });
